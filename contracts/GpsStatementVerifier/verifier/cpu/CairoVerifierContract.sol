@@ -1,5 +1,5 @@
 /*
-  Copyright 2019-2021 StarkWare Industries Ltd.
+  Copyright 2019-2023 StarkWare Industries Ltd.
 
   Licensed under the Apache License, Version 2.0 (the "License").
   You may not use this file except in compliance with the License.
@@ -29,15 +29,14 @@ abstract contract CairoVerifierContract {
       publicMemoryOffset is the offset of the public memory pages' information in the public input.
       selectedBuiltins is a bit-map of builtins that are present in the layout.
     */
-    function getLayoutInfo()
-        external
-        pure
-        virtual
-        returns (uint256 publicMemoryOffset, uint256 selectedBuiltins);
+    function getLayoutInfo() external pure virtual returns (uint256 publicMemoryOffset, uint256 selectedBuiltins);
 
     uint256 internal constant OUTPUT_BUILTIN_BIT = 0;
     uint256 internal constant PEDERSEN_BUILTIN_BIT = 1;
     uint256 internal constant RANGE_CHECK_BUILTIN_BIT = 2;
     uint256 internal constant ECDSA_BUILTIN_BIT = 3;
     uint256 internal constant BITWISE_BUILTIN_BIT = 4;
+    uint256 internal constant EC_OP_BUILTIN_BIT = 5;
+    uint256 internal constant KECCAK_BUILTIN_BIT = 6;
+    uint256 internal constant POSEIDON_BUILTIN_BIT = 7;
 }
