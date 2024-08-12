@@ -15,6 +15,7 @@ async function deployFacetRegistry() {
    // deploy GpsStatementVerifier
    /**
     * -----Sepolia  ---------------
+    * constructor arguments get from the contract creation transaction below:
     * https://sepolia.etherscan.io/address/0xf56da225ec19fb33efb3788f1f230782a5048e92
     * 
         Arg [0] : bootloaderProgramContract (address): 0xf356ff7ac747327eae51bf22014e77f728a8e905
